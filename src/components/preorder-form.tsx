@@ -46,13 +46,18 @@ export function PreorderForm() {
     setErrorMessage("")
 
     try {
-      const response = await fetch(process.env.SHEETDB_API_URL as string, {
+      const apiUrl = process.env.NEXT_PUBLIC_SHEETDB_API_URL
+      if (!apiUrl) {
+        throw new Error("L'URL de l'API SheetDB n'est pas définie.")
+      }
+      const response = await fetch(apiUrl, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
         body: JSON.stringify({ data: formData }),
       })
+
 
       if (!response.ok) {
         throw new Error("Erreur lors de la soumission")
@@ -68,7 +73,8 @@ export function PreorderForm() {
         message: "",
         newsletter: false,
       })
-    // eslint-disable-next-line @typescript-eslint/no-unused-vars
+      console.log(apiUrl, formData) // Pour débogage, à supprimer en production
+      // eslint-disable-next-line @typescript-eslint/no-unused-vars
     } catch (error) {
       setStatus("error")
       setErrorMessage("Erreur lors de la soumission. Veuillez réessayer plus tard.")
@@ -131,21 +137,21 @@ export function PreorderForm() {
               </div>
 
               <div className="bg-gradient-to-r from-green-50 to-red-50 p-6 rounded-lg">
-              <h4 className="font-bold text-lg mb-3 text-gray-900">Prix de précommande</h4>
-              <div className="space-y-2">
-                <div className="flex justify-between items-center">
-                  <span className="text-gray-600">Prix actuel :</span>
-                  <span className="font-bold text-2xl text-blue-600">15€ - 70€</span>
-                </div>
-                <p className="text-sm text-gray-500">Plus il y a de précommandes, plus le prix baisse pour tous !</p>
-                <div className="bg-yellow-100 border border-yellow-300 rounded p-3 mt-4">
-                  <p className="text-sm text-yellow-800">
-                    <strong>Important :</strong> Cette précommande ne vous engage pas financièrement. Le prix final sera
-                    communiqué à la fin de la période de précommande.
-                  </p>
+                <h4 className="font-bold text-lg mb-3 text-gray-900">Prix de précommande</h4>
+                <div className="space-y-2">
+                  <div className="flex justify-between items-center">
+                    <span className="text-gray-600">Prix actuel :</span>
+                    <span className="font-bold text-2xl text-blue-600">15€ - 70€</span>
+                  </div>
+                  <p className="text-sm text-gray-500">Plus il y a de précommandes, plus le prix baisse pour tous !</p>
+                  <div className="bg-yellow-100 border border-yellow-300 rounded p-3 mt-4">
+                    <p className="text-sm text-yellow-800">
+                      <strong>Important :</strong> Cette précommande ne vous engage pas financièrement. Le prix final sera
+                      communiqué à la fin de la période de précommande.
+                    </p>
+                  </div>
                 </div>
               </div>
-            </div>
             </div>
 
             <Card className="shadow-xl">
