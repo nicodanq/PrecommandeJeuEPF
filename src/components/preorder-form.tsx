@@ -221,7 +221,7 @@ export function PreorderForm() {
                       id="quantity"
                       type="number"
                       min="1"
-                      max="10"
+                      max="100"
                       value={formData.quantity}
                       onChange={(e) => setFormData({ ...formData, quantity: Number.parseInt(e.target.value) })}
                       disabled={status === "loading"}
