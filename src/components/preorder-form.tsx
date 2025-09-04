@@ -129,9 +129,8 @@ export function PreorderForm() {
               <div className="bg-white p-6 rounded-lg shadow-sm">
                 <h4 className="font-semibold text-gray-900 mb-3">Ce qui est inclus :</h4>
                 <ul className="space-y-2 text-sm text-gray-600">
-                  <li>• 261 cartes uniques sur l&apos;EPF</li>
+                  <li>• 248 cartes uniques sur l&apos;EPF</li>
                   <li>• 9 catégories thématiques</li>
-                  <li>• Boîte de rangement EPF</li>
                   <li>• Règles du jeu détaillées</li>
                 </ul>
               </div>
@@ -140,8 +139,7 @@ export function PreorderForm() {
                 <h4 className="font-bold text-lg mb-3 text-gray-900">Prix de précommande</h4>
                 <div className="space-y-2">
                   <div className="flex justify-between items-center">
-                    <span className="text-gray-600">Prix actuel :</span>
-                    <span className="font-bold text-2xl text-blue-600">15€ - 70€</span>
+                    <span className="text-gray-600">Le prix final dépendra du nombre total de précommandes</span>
                   </div>
                   <p className="text-sm text-gray-500">Plus il y a de précommandes, plus le prix baisse pour tous !</p>
                   <div className="bg-yellow-100 border border-yellow-300 rounded p-3 mt-4">
@@ -221,7 +219,7 @@ export function PreorderForm() {
                       id="quantity"
                       type="number"
                       min="1"
-                      max="100"
+                      max="1000"
                       value={formData.quantity}
                       onChange={(e) => setFormData({ ...formData, quantity: Number.parseInt(e.target.value) })}
                       disabled={status === "loading"}
@@ -253,7 +251,7 @@ export function PreorderForm() {
 
                   <div className="bg-gray-50 p-4 rounded-lg">
                     <div className="text-center mb-4">
-                      <div className="text-2xl font-bold text-blue-600">Prix estimé : 15€ - 70€</div>
+                      {/* <div className="text-2xl font-bold text-blue-600"></div> */}
                       <p className="text-sm text-gray-600 mt-2">
                         Le prix final dépendra du nombre total de précommandes
                       </p>

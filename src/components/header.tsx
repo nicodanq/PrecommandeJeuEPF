@@ -8,7 +8,7 @@ export function Header() {
           <img src="/Logo_BDJ.png?height=40&width=40" alt="Logo EPF" className="h-10 w-10" />
           <div>
             <span className="text-xl font-bold text-gray-900">Jeu du Centenaire de l&apos;EPF</span>
-            <div className="text-xs text-gray-500">par l&apos;association BDJ</div>
+            <div className="text-xs text-gray-500">par l&apos;association du Bureau des Jeux</div>
           </div>
         </div>
 

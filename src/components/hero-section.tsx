@@ -18,7 +18,7 @@ export function HeroSection() {
         </h1>
 
         <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
-          Un jeu de cartes unique créé par l&apos;association BDJ qui retrace l&apos;histoire, la culture et l&apos;esprit de l&apos;EPF à travers 261 cartes passionnantes.
+          Un jeu de cartes unique créé par l&apos;association BDJ qui retrace l&apos;histoire, la culture et l&apos;esprit de l&apos;EPF à travers 248 cartes passionnantes.
         </p>
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
@@ -38,7 +38,7 @@ export function HeroSection() {
         <div className="flex flex-wrap justify-center gap-8 text-sm text-gray-600">
           <div className="flex items-center gap-2">
             <BookOpen className="h-5 w-5 text-blue-500" />
-            <span>261 cartes uniques</span>
+            <span>248 cartes uniques</span>
           </div>
           <div className="flex items-center gap-2">
             <Users className="h-5 w-5 text-red-500" />

@@ -24,7 +24,7 @@ export function Footer() {
             <ul className="space-y-2 text-gray-400">
               <li>
                 <a href="#product" className="hover:text-white transition-colors">
-                  261 Cartes
+                  248 Cartes
                 </a>
               </li>
               <li>
@@ -60,7 +60,7 @@ export function Footer() {
             <div className="space-y-3 text-gray-400">
               <div className="flex items-center space-x-2">
                 <Mail className="h-4 w-4" />
-                <span>bdj@epf.fr</span>
+                <span>precommande.bdj@gmail.com</span>
               </div>
               <div className="flex items-center space-x-2">
                 <Users className="h-4 w-4" />
@@ -75,7 +75,7 @@ export function Footer() {
         </div>
 
         <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
-          <p>&copy; 2024 Association BDJ - EPF. Projet étudiant non officiel.</p>
+          <p>&copy; 2025 Association BDJ - EPF. Projet dans le cadre du Centenaire de l&apos;EPF.</p>
         </div>
       </div>
     </footer>
